@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT License"
+
+[[mods]]
+modId="itomon"
+version="1.19.2-${Version}"
+displayName="Itomon-Mod"
+displayURL="https://github.com/Rin0530/Itomon-Mod"
+updateJSONURL="https://raw.githubusercontent.com/Rin0530/Itomon-Mod/main/update.json"
+authors="Rin0530"
+description='''
+Ito Life's Youtube project "Let's Make Itomon's Illustrated Book Together". 
+This is a mod to make the characters created in the Youtube project 
+"Let's Make Itomon Pictorial Book" by PathAware Ito Life appear in MineCraft.
+'''
+
+[[dependencies.itomon]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

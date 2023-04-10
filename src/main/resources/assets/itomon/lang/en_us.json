@@ -1,0 +1,12 @@
+{
+  "item.itomon.tumurisu_spawn_egg": "Tumurisu Spawn Egg",
+  "item.itomon.mizumaro_spawn_egg": "Mizumaro Spawn Egg",
+  "item.itomon.pokonoha_spawn_egg": "Pokonoha Spawn Egg",
+  "item.itomon.torobi_spawn_egg": "Torobi Spawn Egg",
+  "item.itomon.konsainu_spawn_egg": "Konsainu Spawn Egg",
+  "entity.itomon.torobi": "Torobi",
+  "entity.itomon.tumurisu": "Tumurisu",
+  "entity.itomon.mizumaro": "Mizumaro",
+  "entity.itomon.pokonoha": "Pokonoha",
+  "entity.itomon.konsainu": "konsainu"
+}

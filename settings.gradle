@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://maven.parchmentmc.org' }
+        maven { 
+            name = "Curseforge"
+            url = 'https://minecraft.curseforge.com/api/maven/'
+        }
+    }
+}
