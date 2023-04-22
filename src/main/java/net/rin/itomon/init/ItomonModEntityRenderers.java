@@ -3,6 +3,7 @@ package net.rin.itomon.init;
 import net.minecraftforge.fml.common.Mod;
 import net.rin.itomon.client.renderer.KonsainuRenderer;
 import net.rin.itomon.client.renderer.MizumaroRenderer;
+import net.rin.itomon.client.renderer.NyafukaRenderer;
 import net.rin.itomon.client.renderer.PokonohaRenderer;
 import net.rin.itomon.client.renderer.TorobiRenderer;
 import net.rin.itomon.client.renderer.TumurisuRenderer;
@@ -19,5 +20,6 @@ public class ItomonModEntityRenderers {
 		event.registerEntityRenderer(ItomonModEntities.POKONOHA.get(), PokonohaRenderer::new);
 		event.registerEntityRenderer(ItomonModEntities.TOROBI.get(), TorobiRenderer::new);
 		event.registerEntityRenderer(ItomonModEntities.KONSAINU.get(), KonsainuRenderer::new);
+		event.registerEntityRenderer(ItomonModEntities.NYAFUKA.get(), NyafukaRenderer::new);
 	}
 }
