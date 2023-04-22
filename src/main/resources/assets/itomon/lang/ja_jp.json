@@ -4,9 +4,11 @@
   "item.itomon.pokonoha_spawn_egg": "ポコノハのスポーンエッグ",
   "item.itomon.torobi_spawn_egg": "トロビーのスポーンエッグ",
   "item.itomon.konsainu_spawn_egg": "コンサイヌのスポーンエッグ",
+  "item.itomon.nyafuka_spawn_egg": "ニャフカのスポーンエッグ",
   "entity.itomon.torobi": "トロビー",
   "entity.itomon.tumurisu": "ツムリス",
   "entity.itomon.mizumaro": "ミズマロ",
   "entity.itomon.pokonoha": "ポコノハ",
-  "entity.itomon.konsainu": "コンサイヌ"
+  "entity.itomon.konsainu": "コンサイヌ",
+  "entity.itomon.nyafuka": "ニャフカ"
 }

@@ -3,6 +3,7 @@ package net.rin.itomon.init;
 import net.minecraftforge.fml.common.Mod;
 import net.rin.itomon.client.model.KonsainuModel;
 import net.rin.itomon.client.model.MizumaroModel;
+import net.rin.itomon.client.model.NyafukaModel;
 import net.rin.itomon.client.model.PokonohaModel;
 import net.rin.itomon.client.model.TorobiModel;
 import net.rin.itomon.client.model.TumurisuModel;
@@ -19,5 +20,6 @@ public class ItomonModModels {
 		event.registerLayerDefinition(TorobiModel.LAYER_LOCATION, TorobiModel::createBodyLayer);
 		event.registerLayerDefinition(PokonohaModel.LAYER_LOCATION, PokonohaModel::createBodyLayer);
 		event.registerLayerDefinition(KonsainuModel.LAYER_LOCATION, KonsainuModel::createBodyLayer);
+		event.registerLayerDefinition(NyafukaModel.LAYER_LOCATION, NyafukaModel::createBodyLayer);
 	}
 }
