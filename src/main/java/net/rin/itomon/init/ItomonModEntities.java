@@ -49,7 +49,7 @@ public class ItomonModEntities {
 	public static final RegistryObject<EntityType<NyafukaEntity>> NYAFUKA = register("nyafuka",
 			EntityType.Builder.<NyafukaEntity>of(NyafukaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NyafukaEntity::new)
-					.sized(0.6f, 1.8f));
+					.sized(1.0f, 0.8f));
 		
 	
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

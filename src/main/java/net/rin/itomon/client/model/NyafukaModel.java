@@ -12,9 +12,6 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 // Made with Blockbench 4.6.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
@@ -224,17 +221,6 @@ public class NyafukaModel<T extends Entity> extends AbstractItomonModel<T> {
 		.texOffs(43, 84).addBox(13.0F, 7.0F, -1.0F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, 16.0F, 8.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
-	}
-
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		tail.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftFrontLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightFrontLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftHindLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightHindLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
