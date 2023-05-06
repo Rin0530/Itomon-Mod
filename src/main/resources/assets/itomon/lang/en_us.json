@@ -5,10 +5,13 @@
   "item.itomon.torobi_spawn_egg": "Torobi Spawn Egg",
   "item.itomon.konsainu_spawn_egg": "Konsainu Spawn Egg",
   "item.itomon.nyafuka_spawn_egg": "Nyafuka Spawn Egg",
+  "item.itomon.elepiyo_spawn_egg": "Elepiyo Spawn Egg",
+  "itemGroup.tabitomon": "Itomon Mod",
   "entity.itomon.torobi": "Torobi",
   "entity.itomon.tumurisu": "Tumurisu",
   "entity.itomon.mizumaro": "Mizumaro",
   "entity.itomon.pokonoha": "Pokonoha",
   "entity.itomon.konsainu": "konsainu",
-  "entity.itomon.nyafuka": "nyafuka"
+  "entity.itomon.nyafuka": "nyafuka",
+  "entity.itomon.elepiyo": "Elepiyo"
 }

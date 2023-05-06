@@ -73,8 +73,11 @@ public class TorobiEntity extends PathfinderMob {
 	}
 
 	public static void registerSpawnPlacement(SpawnPlacementRegisterEvent event) {
-		event.register(ItomonModEntities.TOROBI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),Operation.AND);
+		event.register(ItomonModEntities.TOROBI.get(), SpawnPlacements.Type.ON_GROUND,
+				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos,
+						random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				Operation.AND);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

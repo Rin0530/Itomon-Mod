@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.rin.itomon.init.ItomonModEntities;
 import net.rin.itomon.init.ItomonModItems;
+import net.rin.itomon.init.ItomonModTab;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -42,21 +43,22 @@ public class ItomonMod {
 
 	public ItomonMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		ItomonModTab.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ItomonModItems.REGISTRY.register(bus);
 		ItomonModEntities.REGISTRY.register(bus);
 
-		
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
-	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION,
+	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(
+			new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION,
 			PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	private static int messageID = 0;
 
-	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
+	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder,
+			Function<FriendlyByteBuf, T> decoder,
 			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
 		PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
 		messageID++;
@@ -85,13 +87,12 @@ public class ItomonMod {
 	@SubscribeEvent
 	public void join(ClientPlayerNetworkEvent.LoggingIn event) {
 		Status result = checkUpdate();
-		if (result == Status.OUTDATED){
+		if (result == Status.OUTDATED) {
 			LocalPlayer player = event.getPlayer();
-			String message = 
-			"""
-			Update is available!
-			check https://github.com/Rin0530/Itomon-Mod/releases/latest
-			""";
+			String message = """
+					Update is available!
+					check https://github.com/Rin0530/Itomon-Mod/releases/latest
+					""";
 			ComponentContents contents = new TranslatableContents(message);
 			Component component = MutableComponent.create(contents);
 			player.sendSystemMessage(component);

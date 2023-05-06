@@ -1,6 +1,7 @@
 package net.rin.itomon.init;
 
 import net.minecraftforge.fml.common.Mod;
+import net.rin.itomon.client.model.ElepiyoModel;
 import net.rin.itomon.client.model.KonsainuModel;
 import net.rin.itomon.client.model.MizumaroModel;
 import net.rin.itomon.client.model.NyafukaModel;
@@ -11,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = { Dist.CLIENT })
 public class ItomonModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -21,5 +22,6 @@ public class ItomonModModels {
 		event.registerLayerDefinition(PokonohaModel.LAYER_LOCATION, PokonohaModel::createBodyLayer);
 		event.registerLayerDefinition(KonsainuModel.LAYER_LOCATION, KonsainuModel::createBodyLayer);
 		event.registerLayerDefinition(NyafukaModel.LAYER_LOCATION, NyafukaModel::createBodyLayer);
+		event.registerLayerDefinition(ElepiyoModel.LAYER_LOCATION, ElepiyoModel::createBodyLayer);
 	}
 }
