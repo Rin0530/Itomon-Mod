@@ -5,10 +5,13 @@
   "item.itomon.torobi_spawn_egg": "トロビーのスポーンエッグ",
   "item.itomon.konsainu_spawn_egg": "コンサイヌのスポーンエッグ",
   "item.itomon.nyafuka_spawn_egg": "ニャフカのスポーンエッグ",
+  "item.itomon.elepiyo_spawn_egg": "エレピヨのスポーンエッグ",
+  "itemGroup.tabitomon": "イトモン MOD",
   "entity.itomon.torobi": "トロビー",
   "entity.itomon.tumurisu": "ツムリス",
   "entity.itomon.mizumaro": "ミズマロ",
   "entity.itomon.pokonoha": "ポコノハ",
   "entity.itomon.konsainu": "コンサイヌ",
-  "entity.itomon.nyafuka": "ニャフカ"
+  "entity.itomon.nyafuka": "ニャフカ",
+  "entity.itomon.elepiyo": "エレピヨ"
 }

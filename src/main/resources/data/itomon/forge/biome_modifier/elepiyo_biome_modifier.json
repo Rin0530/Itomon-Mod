@@ -1,0 +1,14 @@
+{
+    "type": "forge:add_spawns",
+    "biomes": [
+        "windswept_hills",
+        "windswept_gravelly_hills",
+        "snowy_taiga"
+    ],
+    "spawners": {
+        "type": "itomon:elepiyo",
+        "weight": 20,
+        "minCount": 4,
+        "maxCount": 4
+    }
+}
