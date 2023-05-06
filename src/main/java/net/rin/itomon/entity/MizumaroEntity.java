@@ -53,12 +53,14 @@ public class MizumaroEntity extends PathfinderMob {
 					double dy = this.wantedY - MizumaroEntity.this.getY();
 					double dz = this.wantedZ - MizumaroEntity.this.getZ();
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
-					float f1 = (float) (this.speedModifier * MizumaroEntity.this.getAttributeValue(Attributes.MOVEMENT_SPEED));
+					float f1 = (float) (this.speedModifier
+							* MizumaroEntity.this.getAttributeValue(Attributes.MOVEMENT_SPEED));
 					MizumaroEntity.this.setYRot(this.rotlerp(MizumaroEntity.this.getYRot(), f, 10));
 					MizumaroEntity.this.yBodyRot = MizumaroEntity.this.getYRot();
 					MizumaroEntity.this.yHeadRot = MizumaroEntity.this.getYRot();
 					if (MizumaroEntity.this.isInWater()) {
-						MizumaroEntity.this.setSpeed((float) MizumaroEntity.this.getAttributeValue(Attributes.MOVEMENT_SPEED));
+						MizumaroEntity.this
+								.setSpeed((float) MizumaroEntity.this.getAttributeValue(Attributes.MOVEMENT_SPEED));
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
 						MizumaroEntity.this.setXRot(this.rotlerp(MizumaroEntity.this.getXRot(), f2, 5));
@@ -114,8 +116,9 @@ public class MizumaroEntity extends PathfinderMob {
 
 	@Override
 	public boolean canDrownInFluidType(FluidType type) {
-		if (type == ForgeMod.WATER_TYPE.get()) return true;
-        return type.canDrownIn(self());
+		if (type == ForgeMod.WATER_TYPE.get())
+			return true;
+		return type.canDrownIn(self());
 	}
 
 	@Override
@@ -129,8 +132,11 @@ public class MizumaroEntity extends PathfinderMob {
 	}
 
 	public static void registerSpawnPlacement(SpawnPlacementRegisterEvent event) {
-		event.register(ItomonModEntities.MIZUMARO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),Operation.AND);
+		event.register(ItomonModEntities.MIZUMARO.get(), SpawnPlacements.Type.ON_GROUND,
+				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos,
+						random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				Operation.AND);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

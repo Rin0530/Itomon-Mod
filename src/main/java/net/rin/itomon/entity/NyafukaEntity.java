@@ -28,7 +28,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-
 public class NyafukaEntity extends PathfinderMob {
 	public NyafukaEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(ItomonModEntities.NYAFUKA.get(), world);
@@ -83,9 +82,12 @@ public class NyafukaEntity extends PathfinderMob {
 		return super.hurt(source, amount);
 	}
 
-    public static void registerSpawnPlacement(SpawnPlacementRegisterEvent event) {
-		event.register(ItomonModEntities.NYAFUKA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-			(entityType, world, reason, pos, random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),Operation.AND);
+	public static void registerSpawnPlacement(SpawnPlacementRegisterEvent event) {
+		event.register(ItomonModEntities.NYAFUKA.get(), SpawnPlacements.Type.ON_GROUND,
+				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos,
+						random) -> (Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				Operation.AND);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

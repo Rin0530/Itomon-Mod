@@ -6,8 +6,6 @@ import net.rin.itomon.entity.NyafukaEntity;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
-
-
 public class NyafukaRenderer extends MobRenderer<NyafukaEntity, NyafukaModel<NyafukaEntity>> {
 	public NyafukaRenderer(EntityRendererProvider.Context context) {
 		super(context, new NyafukaModel<>(context.bakeLayer(NyafukaModel.LAYER_LOCATION)), 0.5f);
@@ -18,4 +16,3 @@ public class NyafukaRenderer extends MobRenderer<NyafukaEntity, NyafukaModel<Nya
 		return new ResourceLocation("itomon:textures/entities/nyahuka.png");
 	}
 }
-

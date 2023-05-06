@@ -20,39 +20,46 @@ import net.minecraft.world.entity.Entity;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItomonModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, ItomonMod.MODID);
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES,
+			ItomonMod.MODID);
 	public static final RegistryObject<EntityType<TumurisuEntity>> TUMURISU = register("tumurisu",
-			EntityType.Builder.<TumurisuEntity>of(TumurisuEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<TumurisuEntity>of(TumurisuEntity::new, MobCategory.WATER_CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TumurisuEntity::new)
 					.sized(0.6f, 0.6f));
 
 	public static final RegistryObject<EntityType<MizumaroEntity>> MIZUMARO = register("mizumaro",
-			EntityType.Builder.<MizumaroEntity>of(MizumaroEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<MizumaroEntity>of(MizumaroEntity::new, MobCategory.WATER_CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MizumaroEntity::new)
 					.sized(0.6f, 0.6f));
-	
+
 	public static final RegistryObject<EntityType<PokonohaEntity>> POKONOHA = register("pokonoha",
-			EntityType.Builder.<PokonohaEntity>of(PokonohaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<PokonohaEntity>of(PokonohaEntity::new, MobCategory.CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PokonohaEntity::new)
 					.sized(0.6f, 0.6f));
-	
+
 	public static final RegistryObject<EntityType<TorobiEntity>> TOROBI = register("torobi",
-			EntityType.Builder.<TorobiEntity>of(TorobiEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<TorobiEntity>of(TorobiEntity::new, MobCategory.CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TorobiEntity::new).fireImmune()
 					.sized(0.6f, 0.8f));
-	
+
 	public static final RegistryObject<EntityType<KonsainuEntity>> KONSAINU = register("konsainu",
-			EntityType.Builder.<KonsainuEntity>of(KonsainuEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<KonsainuEntity>of(KonsainuEntity::new, MobCategory.CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KonsainuEntity::new)
 					.sized(0.6f, 0.8f));
 
 	public static final RegistryObject<EntityType<NyafukaEntity>> NYAFUKA = register("nyafuka",
-			EntityType.Builder.<NyafukaEntity>of(NyafukaEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+			EntityType.Builder.<NyafukaEntity>of(NyafukaEntity::new, MobCategory.CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NyafukaEntity::new)
 					.sized(1.0f, 0.8f));
-		
-	
-	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+
+	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname,
+			EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
 
