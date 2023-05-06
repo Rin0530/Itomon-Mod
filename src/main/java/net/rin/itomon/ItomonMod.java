@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.rin.itomon.init.ItomonModEntities;
 import net.rin.itomon.init.ItomonModItems;
+import net.rin.itomon.init.ItomonModTab;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -42,7 +43,7 @@ public class ItomonMod {
 
 	public ItomonMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		ItomonModTab.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ItomonModItems.REGISTRY.register(bus);
