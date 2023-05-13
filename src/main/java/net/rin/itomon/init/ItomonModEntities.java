@@ -3,6 +3,7 @@ package net.rin.itomon.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.rin.itomon.ItomonMod;
 import net.rin.itomon.entity.ElepiyoEntity;
+import net.rin.itomon.entity.KappiruEntity;
 import net.rin.itomon.entity.KonsainuEntity;
 import net.rin.itomon.entity.MizumaroEntity;
 import net.rin.itomon.entity.NyafukaEntity;
@@ -64,6 +65,11 @@ public class ItomonModEntities {
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElepiyoEntity::new)
 					.sized(0.8f, 0.8f));
+	public static final RegistryObject<EntityType<KappiruEntity>> KAPPIRU = register("kappiru",
+			EntityType.Builder.<KappiruEntity>of(KappiruEntity::new, MobCategory.CREATURE)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KappiruEntity::new)
+					.sized(0.8f, 0.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname,
 			EntityType.Builder<T> entityTypeBuilder) {
@@ -79,6 +85,7 @@ public class ItomonModEntities {
 		event.put(KONSAINU.get(), KonsainuEntity.createAttributes().build());
 		event.put(NYAFUKA.get(), NyafukaEntity.createAttributes().build());
 		event.put(ELEPIYO.get(), ElepiyoEntity.createAttributes().build());
+		event.put(KAPPIRU.get(), KappiruEntity.createAttributes().build());
 	}
 
 	@SubscribeEvent
@@ -90,5 +97,6 @@ public class ItomonModEntities {
 		KonsainuEntity.registerSpawnPlacement(event);
 		NyafukaEntity.registerSpawnPlacement(event);
 		ElepiyoEntity.registerSpawnPlacement(event);
+		KappiruEntity.registerSpawnPlacement(event);
 	}
 }

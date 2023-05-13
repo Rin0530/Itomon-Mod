@@ -32,4 +32,7 @@ public class ItomonModItems {
 	public static final RegistryObject<Item> ELEPIYO = REGISTRY.register("elepiyo_spawn_egg",
 			() -> new ForgeSpawnEggItem(ItomonModEntities.ELEPIYO, -256, -1,
 					new Item.Properties().tab(ItomonModTab.TAB_ITOMON)));
+	public static final RegistryObject<Item> KAPIRU = REGISTRY.register("kappiru_spawn_egg",
+			() -> new ForgeSpawnEggItem(ItomonModEntities.KAPPIRU, -6684673, -1,
+					new Item.Properties().tab(ItomonModTab.TAB_ITOMON)));
 }

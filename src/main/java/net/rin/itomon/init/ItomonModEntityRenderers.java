@@ -2,6 +2,7 @@ package net.rin.itomon.init;
 
 import net.minecraftforge.fml.common.Mod;
 import net.rin.itomon.client.renderer.ElepiyoRenderer;
+import net.rin.itomon.client.renderer.KappiruRender;
 import net.rin.itomon.client.renderer.KonsainuRenderer;
 import net.rin.itomon.client.renderer.MizumaroRenderer;
 import net.rin.itomon.client.renderer.NyafukaRenderer;
@@ -23,5 +24,6 @@ public class ItomonModEntityRenderers {
 		event.registerEntityRenderer(ItomonModEntities.KONSAINU.get(), KonsainuRenderer::new);
 		event.registerEntityRenderer(ItomonModEntities.NYAFUKA.get(), NyafukaRenderer::new);
 		event.registerEntityRenderer(ItomonModEntities.ELEPIYO.get(), ElepiyoRenderer::new);
+		event.registerEntityRenderer(ItomonModEntities.KAPPIRU.get(), KappiruRender::new);
 	}
 }
