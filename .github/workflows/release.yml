@@ -57,7 +57,7 @@ jobs:
     needs: [version,build]
     steps:
       - name: Download built mod file
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Itomon_mod
       - name: Rename artifact
